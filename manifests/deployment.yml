@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: alphadiallopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alphadiallopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: alphadiallopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: alphadiallopipelinesjavascriptdocker 
+          image: mycraz400.azurecr.io/alphadiallopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
